@@ -61,5 +61,3 @@ def random_predict(number:int=1) -> int:
     count = 0
     count = number_find(0, 101, number, count)
     return(count)
-
-print(score_game(random_predict))
