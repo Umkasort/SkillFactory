@@ -1,4 +1,17 @@
-## Введите свое решение ниже
-prices = {'Adidas': 4298, 'Nike': 6550, 'Puma': 4490, 'Asics': 3879}
-purchases = ['Adidas', 'Nike']
-print(prices[purchases[1]])
+def purchase(data):
+    set_data = set(data)
+    dict_data={}
+    if len(set_data) == len (data):
+        print ('Ваш заказ оформлен верно')
+    else:
+        for i in data:
+            if i in dict_data.keys() :dict_data[i] +=1 
+            else: dict_data[i] =1
+        for i in dict_data:
+            if dict_data[i]>1:
+                print (f'Вы продублировали ингредиент {i} в заказе {data.count(i)} раз(а)')
+ 
+
+ingredients = ['молоко коровье', 'молоко овечье', 'бактерии', 'молоко козье', 'сливки', 'фермент', 'закваска', 'молоко коровье', 'соль', 'молоко коровье', 'бактерии', 'молоко овечье', 'кислота лимонная', 'грибки', 'соль', 'дрожжи', 'кислота уксусная', 'кальций', 'калий', 'каротин', 'аннато', 'специя', 'пряность', 'ароматизатор', 'соль', 'кислота молочная']
+
+purchase(ingredients)
